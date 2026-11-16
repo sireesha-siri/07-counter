@@ -1,15 +1,15 @@
-import {useState, MouseEvent, JSX} from 'react'
+import {JSX, useState} from 'react'
 import './index.css'
 
 const Counter = (): JSX.Element => {
   const [count, setCount] = useState<number>(0)
 
-  const onIncrement = (event: MouseEvent<HTMLButtonElement>): void => {
-    setCount(prev => prev + 1)
+  const onIncrement = (): void => {
+    setCount(prevCount => prevCount + 1)
   }
 
-  const onDecrement = (event: MouseEvent<HTMLButtonElement>): void => {
-    setCount(prev => prev - 1)
+  const onDecrement = (): void => {
+    setCount(prevCount => prevCount - 1)
   }
 
   return (
